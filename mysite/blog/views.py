@@ -10,7 +10,7 @@ from django.views.decorators.http import require_POST
 
 def post_list(request):
     post_list = Post.published.all()
-    paginator = Paginator(post_list, 3) # 3 posts per page
+    paginator = Paginator(post_list, 8) # 3 posts per page
     page_number = request.GET.get('page', 1)
     try:
         posts = paginator.page(page_number)
@@ -50,7 +50,7 @@ class PostListView(ListView):
     """
     queryset = Post.published.all()
     context_object_name = 'posts'
-    paginate_by = 3
+    paginate_by = 8
     template_name = 'blog/post/list.html'
 
 

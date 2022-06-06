@@ -3,6 +3,7 @@
 <html>
 <head>
   <title>{% block title %}{% endblock %}</title>
+  <link rel="shortcut icon" href="{% static "favicon.ico" %}" type="image/x-icon">
   <link href="{% static "css/blog.css" %}" rel="stylesheet">
 </head>
 <body>
@@ -11,8 +12,13 @@
     {% endblock %}
   </div>
   <div id="sidebar">
-    <h2>My blog</h2>
-    <p>This is my blog.</p>
+    <h2>Список изменений</h2>
+  <ul>
+    <li>Количество записей на странице увеличено до 8</li>
+    <li>Добавлена иконка для страниц</li>
+    <li>В админке можно узнать индекс записи</li>
+   
+  </ul>
   </div>
 </body>
 </html>
